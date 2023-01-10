@@ -1,0 +1,43 @@
+
+
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Place Order{% endblock %}
+{% block head %}
+{% endblock %}
+
+{% block content %}
+<div class="add_section">
+
+    <div class="form_container">
+
+        <div class="container">
+
+            <h2>Place Order</h2>
+            <form method="POST" action ="">
+                {% csrf_token %}
+
+                <p>
+                    <label for="menu_item">Menu item:</label>
+                    <select name="menu_item" id="menu_item" required>
+                        <option value selected>-----</option>
+                        {% for menu_item in menu_items %}
+                        <option value={{ menu_item.id }} >{{ menu_item.title }} - {{ menu_item.price }}</option>
+                        {% endfor %}
+                    </select>
+                </p>
+
+                {{ form.as_p }}
+                
+                <div class="submit">
+                    <a class="cancel" href="{% url 'menu' %}">Back</a>
+                    <input type='submit' value="Confirm">
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

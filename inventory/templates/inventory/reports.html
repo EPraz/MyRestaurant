@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %} 
+{% block title %}Reports List  {% endblock %}
+
+{% block head %}
+{% endblock %}
+{% block content %}
+    <div class="reports">
+        <div class="container">
+            
+            <h2>Purchases</h2>
+            <table class="inventory-table">
+                <thead class="table-header">
+                    <tr>
+                        <th class="col col-1">Menu Item</th>
+                        <th class="col col-2">Price</th>
+                        <th class="col col-3">Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for purchase in purchases %}
+                    <tr>
+                        <td>{{ purchase.menu_item.title }}</td>
+                        <td class="price">${{ purchase.menu_item.price|stringformat:".2f" }}</td>
+                        <td>{{ purchase.timestamp }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="total_section">
+                <hr/>
+                
+                <h2>Totals</h2>
+                <div style="color: green;">Total Revenue: ${{ revenue|stringformat:".2f" }}</div>
+                <div style="color: red;">Total Cost: ${{ total_cost|stringformat:".2f" }}</div>
+                <div style="color: blue;">Total Profit: ${{ profit|stringformat:".2f" }}</div>
+                <a class="" href="{% url 'home' %}">Back</a>
+            </div>
+        </div>
+    </div>
+    {% endblock %}

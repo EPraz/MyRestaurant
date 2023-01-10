@@ -1,0 +1,30 @@
+
+    
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Login{% endblock %}
+{% block head %}
+{% endblock %}
+
+{% block content %}
+<div class="add_section">
+
+    <div class="form_container">
+
+        <div class="container">
+
+            <h2>Login</h2>
+            <form method="POST" action ="">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="submit">
+                    <a class="cancel" href="{% url 'home' %}">Back</a>
+                    
+                    <input type='submit' value="Login">
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

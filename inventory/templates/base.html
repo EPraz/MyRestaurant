@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%} My Restaurant {% endblock %}</title>
+    {% load livereload_tags  %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'inventory/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'inventory/css/main_body.css' %}" />
+    <link rel="stylesheet" href="{% static 'inventory/css/responsive.css' %}" />
+    {% comment %} {% livereload_script %} {% endcomment %}
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div class="app">
+        <header class='header'>
+            <div class="logo"><img src="./../static/inventory/images/logo_myrestaurant.png" alt="Logo Random Restaurant"/></div>
+            <!-- <div class="logo"><img src="" alt="Logo Random Restaurant"/></div> -->
+            <div class="menu">
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'menu' %}">Our Menu</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a href="{% url 'ingredients' %}">Inventory</a></li>
+                        <li><a href="{% url 'reports'  %}">Reports</a></li>
+                        {% comment %} <li><a href=""></a></li> {% endcomment %}
+                    {% endif %}
+                </ul>
+            </div>
+           
+           
+            {% if user.is_authenticated %}
+            <button class="login_button"><a href="{% url 'logout' %}">Log Out</a></button>
+            {% else %}
+            <button class="login_button"><a href="{% url 'login' %}">Log In</a></button>
+            {% endif %}
+            
+
+            <div class="ubication">
+                <div class="img">
+                    <img src="./../static/inventory/images/277-2773517_instagram-png-white.png" alt="">
+                </div>
+                <div class="description">
+                    <p>Marbella, Panama</p>
+                    <p>Plaza Unknown</p>
+                    <p>(507) ..-..-..-..</p>
+                </div>
+            </div>
+        </header>
+        <main class="main_body">
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        <footer>
+            <div class="links">
+                <ul>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Our Staff</a></li>
+                </ul>
+            </div>
+            {% comment %} <div class="logo">logo</div> {% endcomment %}
+            <div class="copyright">@ Copyright 2023. All right reserved.</div>
+        </footer>
+    </div>
+</body>
+</html>

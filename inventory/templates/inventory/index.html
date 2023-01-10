@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block head %}
+<link rel='stylesheet' href="{% static 'inventory/css/style.css' %}" >
+{% endblock %}
+{% block title %}My Restaurant - Homepage{% endblock %}
+
+{% block content %}
+    <div class="home">
+        {% comment %} Hero Section / Above the fold {% endcomment %}
+        <div class="hero_section">
+            <h1>My Restaurant Website</h1>
+            <a class="see_menu_button" href="{% url 'menu' %}">see full  menu here</a>
+        </div>
+
+        <!-- {% comment %} Menu {% endcomment %}
+        <div class="menu_section">
+            <div class='grid'>
+
+                <div  class='item'>
+                    <div class="picture">
+                        <img src="" alt="">
+                    </div>
+                    <div class="title">dish and price</div>
+                    <div class="description">description of the plate/ingredients</div>
+                    <a href="{% url 'new_purchase'%}">Order Now</a>
+                </div>
+
+            </div>
+        </div>
+
+        {% comment %} How we work section {% endcomment %}
+        <div class="how_we_work">
+            <div class="flex_section">
+                <div class="flex_box">
+                    <div class="picture"><img src="" alt=""></div>
+                    <div class="title">you order from the menu</div>
+                    <div class="description">description</div>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+
+{% endblock %}

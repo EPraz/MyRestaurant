@@ -1,0 +1,306 @@
+
+/* ***************************************************************** */
+/* ************************* Main Body ***************************** */
+/* ***************************************************************** */
+
+/* Main */
+.app .main_body {
+    width: 80%;
+    height: 100vh;
+    
+}
+.app .main_body .home {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.15), 
+        rgba(0, 0, 0, 0.15)
+    ),url("./../images/pexels-pixabay-255501.jpg");
+    background-position: 100% 90%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.app .main_body .hero_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.app .main_body .home  .hero_section h1 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.app .main_body .home .hero_section .see_menu_button {
+    padding: 1.2rem .8rem;
+    /* background: #a87942; */
+    background: #b07059;
+    color: #fff;
+    text-transform: uppercase;
+    display: block;
+    width: 75%;
+    margin: 2rem auto;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .5s;
+
+}
+
+.app .main_body .hero_section .see_menu_button:hover{
+    background: #fff;
+    color: #000;
+    transition: .5s;
+}
+
+
+/* ***************************************************************** */
+/* ********************** Add Menu Item **************************** */
+/* ***************************************************************** */
+
+.app .add_section {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.25), 
+        rgba(0, 0, 0, 0.25)
+    ),url("./../images/pexels-karolina-grabowska-4033636.jpg") fixed no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+.app .add_section .form_container {
+    width: 80%;
+    height: 80%;
+    max-width: 450px;
+    max-height: 550px;
+    background:rgba(255, 255, 255, 0.649);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.app .add_section .form_container .container{
+    width: 100%;
+    padding:3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.app .add_section .form_container .container form {
+    width: 100%;
+}
+
+.app .add_section .form_container .container h2 {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.app .add_section .form_container .container form p {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+.app .add_section .form_container .container form p select  {
+    width: 70%;
+}
+
+.app .add_section .form_container .container form .submit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.app .add_section .form_container .container form .submit a,
+.app .add_section .form_container .container form .submit input[type=submit] {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    color: #fff;
+    display: block;
+    width: 45%;
+    height: 35px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: .5s;
+    margin: .5rem 0;
+    
+}
+
+.app .add_section .form_container .container form .submit input[type=submit] {
+    background: green;
+}
+
+.app .add_section .form_container .container form .submit a {
+    background: red;
+}
+
+.app .add_section .form_container .container form .submit a:hover,
+.app .add_section .form_container .container form .submit input[type=submit]:hover {
+    cursor: pointer;
+
+}
+
+
+/* ***************************************************************** */
+/* ************************* Reports ******************************* */
+/* ***************************************************************** */
+.app .reports {
+    padding: .8rem;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.25), 
+        rgba(0, 0, 0, 0.25)
+    ),url("./../images/pexels-karolina-grabowska-4033636.jpg") fixed no-repeat;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app .reports .container {
+    width: 80%;
+    max-width: 450px;
+    height: 80%;
+    max-height: 550px;
+    background:rgba(255, 255, 255, 0.649);
+    border-radius: 50px;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+
+.app .reports .container h2 {
+    text-align: center;
+}
+
+.app .reports .container .inventory-table td {
+    text-align: center;    
+}
+
+.app .reports .container .inventory-table thead {
+    background-color: #95a5a6;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+.app .reports .container .inventory-table tr {
+    /* background-color: #ffffff; */
+    background:rgba(255, 255, 255, 0.35);
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+.app .reports .container .inventory-table .col-1 {
+    width: 20%;
+}
+.app .reports .container .inventory-table .col-2 {
+    width: 10%;
+}
+.app .reports .container .inventory-table .col-3 {
+    width: 25%;
+  }
+
+
+.app .reports .total_section a {
+    display: inline-block;
+    margin: .8rem auto;
+    background: red;
+    color: #fff;
+    font-weight: bold;
+    padding: .8rem 1.2rem;
+    text-decoration: none;
+}
+
+
+/* ***************************************************************** */
+/* ************************* Table   ******************************* */
+/* ***************************************************************** */
+
+table{
+    width:100%;
+    table-layout: fixed;
+}
+.tbl-header{
+    background-color: rgba(255,255,255,0.5);
+}
+.tbl-content{
+    background-color: rgba(255,255,255,0.2);
+    height:325px;
+    overflow-x:auto;
+    margin-top: 0px;
+    border: 1px solid rgba(255,255,255,0.3);
+    margin-bottom: .8rem;
+}
+.section .new_ing {
+    display: block;
+    text-align: center;
+    padding: .8rem 1.2rem;
+    color: black;
+    background-color: #b07059;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+.tbl-content .delete {
+    color: red;
+}
+th{
+    padding: 20px 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 12pt;
+    color: #000;
+    text-transform: uppercase;
+}
+td{
+    padding: 15px;
+    text-align: left;
+    vertical-align:middle;
+    font-weight: 300;
+    font-size: 12pt;
+    color: #000;
+    border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+  
+  
+.section{
+    padding: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: -webkit-linear-gradient(left, #b07059, #25b7c4);
+    background: linear-gradient(to right, #b07059, #25b7c4);
+    font-size: 18px;
+
+}
+  
+  
+  /* for custom scrollbar for webkit browser*/
+  
+  ::-webkit-scrollbar {
+      width: 6px;
+  } 
+  ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  } 
+  ::-webkit-scrollbar-thumb {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  }

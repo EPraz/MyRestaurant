@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block head %}
+<link rel='stylesheet' href="{% static 'inventory/css/style.css' %}" >
+{% endblock %}
+{% block title %}Success Purchase{% endblock %}
+
+{% block content %}
+    <div class="home">
+        {% comment %} Hero Section / Above the fold {% endcomment %}
+        <div class="hero_section">
+            <h1>Thanks For Your Purchase <br/> You'll Be Contact Soon</h1>
+            <a class="see_menu_button" href="{% url 'menu' %}">Get Back To The Menu</a>
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% comment %} {% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block content %}
+    <h2>Purchases</h2>
+    <a href="{% url 'new_purchase' %}">Make a new Order</a>
+    <hr/ >
+    <table>
+        <thead>
+            <tr>
+                <th>Menu Item</th>
+                <th>Price</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for purchase in object_list %}
+                <tr>
+                    <td>{{ purchase.menu_item.title }}</td>
+                    <td>${{ purchase.menu_item.price|stringformat:".2f" }}</td>
+                    <td>{{ purchase.timestamp }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %} {% endcomment %}

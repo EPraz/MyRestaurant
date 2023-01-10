@@ -1,0 +1,34 @@
+
+
+
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Delete {{object.title||upper}} {% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+<div class="add_section">
+
+    <div class="form_container">
+
+        <div class="container">
+
+            <h2>Add New Ingredient <br/>on the Inventory</h2>
+            <form method="POST" action ="">
+                {% csrf_token %}
+                <p>Are you sure you want to delete {{ object.title|upper }}?</p>
+                
+                <div class="submit">
+                    <a class="cancel" href="{% url 'menu' %}">Back</a>
+                    
+                    <input type='submit' value="Confirm">
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

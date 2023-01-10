@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Add New Recipe{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+<div class="add_section">
+
+    <div class="form_container">
+
+        <div class="container">
+
+            <h2>Add New Recipe on the Menu</h2>
+            <form method="POST" action ="">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="submit">
+                    <a class="cancel" href="{% url 'menu' %}">Back</a>
+                    
+                    <input type='submit' value="Confirm">
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
